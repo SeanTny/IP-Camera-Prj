@@ -12,7 +12,7 @@
 #include <stdlib.h>
 
 int main(void) {
-	puts("!!!Hello World tusen modefy 2 !!!"); /* prints !!!Hello World!!! */
+	puts("!!!Hello World tusen modefy 2 this is by tusen at baoan xixiang !!!"); /* prints !!!Hello World!!! */
 	return EXIT_SUCCESS;
 }
 
