@@ -1,0 +1,15 @@
+17:07:45 **** Build of configuration Debug for project App_hello ****
+make all 
+Building file: ../src/App_hello.c
+Invoking: GCC C Compiler
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/App_hello.d" -MT"src/App_hello.o" -o "src/App_hello.o" "../src/App_hello.c"
+Finished building: ../src/App_hello.c
+ 
+Building target: App_hello
+Invoking: GCC C Linker
+gcc  -o "App_hello"  ./src/App_hello.o   
+Finished building target: App_hello
+ 
+17:10:26 **** Incremental Build of configuration Debug for project App_hello ****
+make all 
+make: Nothing to be done for `all'.
