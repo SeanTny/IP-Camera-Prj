@@ -1,0 +1,15 @@
+16:50:15 **** Build of configuration Debug for project helloworld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: Cross GCC Compiler
+arm-linux-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: helloworld
+Invoking: Cross GCC Linker
+arm-linux-gcc  -o "helloworld"  ./src/helloworld.o   
+Finished building target: helloworld
+ 
+
+16:50:16 Build Finished (took 1s.683ms)
+
