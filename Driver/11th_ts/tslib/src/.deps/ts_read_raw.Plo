@@ -1,0 +1,54 @@
+ts_read_raw.lo: ts_read_raw.c ../config.h tslib-private.h tslib.h \
+  /usr/local/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stdarg.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/time.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/features.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/predefs.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/cdefs.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/wordsize.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/stubs.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/types.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/typesizes.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/time.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/time.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/select.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/select.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigset.h \
+  tslib-filter.h tslib.h
+
+../config.h:
+
+tslib-private.h:
+
+tslib.h:
+
+/usr/local/arm/4.3.2/bin/../lib/gcc/arm-none-linux-gnueabi/4.3.2/include/stdarg.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/time.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/features.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/predefs.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/cdefs.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/wordsize.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/gnu/stubs.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/types.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/typesizes.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/time.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/time.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/sys/select.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/select.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/bits/sigset.h:
+
+tslib-filter.h:
+
+tslib.h:

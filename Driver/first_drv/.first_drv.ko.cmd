@@ -1,0 +1,1 @@
+cmd_/work/IP-Camera-Prj/Driver/first_drv/first_drv.ko := arm-linux-ld -EL -r  -T /media/tusen/L_Linux/system/linux-3.4.2/scripts/module-common.lds --build-id  -o /work/IP-Camera-Prj/Driver/first_drv/first_drv.ko /work/IP-Camera-Prj/Driver/first_drv/first_drv.o /work/IP-Camera-Prj/Driver/first_drv/first_drv.mod.o

@@ -1,0 +1,1 @@
+cmd_/work/cd0/drivers_and_test_new/jz2440/11th_ts/s3c_ts.ko := arm-linux-ld -EL -r  -T /media/tusen/L_Linux/system/linux-3.4.2/scripts/module-common.lds --build-id  -o /work/cd0/drivers_and_test_new/jz2440/11th_ts/s3c_ts.ko /work/cd0/drivers_and_test_new/jz2440/11th_ts/s3c_ts.o /work/cd0/drivers_and_test_new/jz2440/11th_ts/s3c_ts.mod.o

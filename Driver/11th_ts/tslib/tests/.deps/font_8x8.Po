@@ -1,0 +1,21 @@
+font_8x8.o: font_8x8.c font.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/types.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/posix_types.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/stddef.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/posix_types.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/types.h \
+  /usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/int-ll64.h
+
+font.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/types.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/posix_types.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/linux/stddef.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/posix_types.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/asm/types.h:
+
+/usr/local/arm/4.3.2/bin/../arm-none-linux-gnueabi/libc/usr/include/asm-generic/int-ll64.h:

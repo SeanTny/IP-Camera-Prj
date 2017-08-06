@@ -10,3 +10,7 @@ Invoking: Cross GCC Linker
 arm-linux-gcc  -o "helloworld"  ./src/helloworld.o   
 Finished building target: helloworld
  
+17:11:47 **** Clean-only build of configuration Debug for project helloworld ****
+make clean 
+rm -rf  ./src/helloworld.o  ./src/helloworld.d  helloworld
+ 

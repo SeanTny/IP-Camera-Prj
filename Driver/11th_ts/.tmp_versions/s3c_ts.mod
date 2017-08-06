@@ -1,0 +1,2 @@
+/work/cd0/drivers_and_test_new/jz2440/11th_ts/s3c_ts.ko
+/work/cd0/drivers_and_test_new/jz2440/11th_ts/s3c_ts.o
