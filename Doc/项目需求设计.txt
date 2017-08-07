@@ -65,7 +65,7 @@
 3、使用eclips+cdt集成开发环境，和arm-linux-gcc编译器。
 
 
-add test therh
+
 
 
 
