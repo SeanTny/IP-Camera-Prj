@@ -1,0 +1,6 @@
+all:
+	arm-linux-gcc -o example ../example1.c 
+
+clean:
+	rm-rf *.o	
+	 

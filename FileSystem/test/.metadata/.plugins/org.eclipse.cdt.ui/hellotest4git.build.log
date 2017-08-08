@@ -1,0 +1,7 @@
+14:18:26 **** Incremental Build of configuration Debug for project hellotest4git ****
+make all 
+arm-linux-gcc  -o  /work/nfs_root/fs_mini_mdev_new/test/output/b.out   src/hellotest4git.c
+arm-linux-gcc  -o  output/b.out   									   src/hellotest4git.c
+
+14:18:26 Build Finished (took 139ms)
+

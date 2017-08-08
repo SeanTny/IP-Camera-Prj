@@ -1,0 +1,152 @@
+/*
+ * show_font.c
+ *
+ *  Created on: 2017年3月26日
+ *      Author: tusen
+ */
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <sys/ioctl.h>
+#include <linux/fb.h>
+#include <unistd.h>
+#include <sys/mman.h>
+
+
+
+extern int functionext(int agr);
+extern const unsigned char fontdata_8x16[4096];
+
+
+int fd_fb;
+int fd_HZK16;
+struct fb_var_screeninfo var;
+struct fb_fix_screeninfo fix;
+struct stat hzk_stat;
+unsigned int line_width;
+unsigned int pixel_width;
+int screen_size;
+unsigned char * fbmem;
+unsigned char * hzkmem;
+
+
+void lcd_put_ascii(int x, int y,unsigned char c ){
+	unsigned char * dots=(unsigned char *) &fontdata_8x16[c*16];
+
+}
+
+
+/* 主涵数的地方 */
+int main(int argc, char** argv){
+
+	int number=3;
+	number=functionext(2);
+	printf("hello test the number is : %d \n",number);
+
+	unsigned char str[]="中";
+
+	/* 打开显存 */
+	fd_fb=open("/dev/fb0",O_RDWR);
+	if(fd_fb < 0){
+		printf("can`t open /dev/fb0 \n");
+		return -1;
+	}
+
+	if(ioctl(fd_fb,FBIOGET_VSCREENINFO, &var)){
+		printf("can`t get var \n");
+		return -1;
+	}
+
+	if (ioctl(fd_fb,FBIOGET_VSCREENINFO,&fix)){
+		printf("can`t get fix \n");
+		return -1;
+	}
+
+	/* 屏幕的参数计算 */
+	line_width=var.xres*var.bits_per_pixel/8; 			//宽的字节数
+	pixel_width=var.bits_per_pixel/8;					//每一个像素占用的字节数
+	screen_size =var.xres*var.yres*var.bits_per_pixel/8;//显存的字节数
+	fbmem=(unsigned char *)mmap(NULL,screen_size,PROT_READ|PROT_WRITE, MAP_SHARED,fd_fb,0);
+	if(fbmem==(unsigned char *)-1){
+		printf("can`t mmap \n");
+		return -1;
+	}
+
+
+	//====================================================
+	fd_HZK16=open("./HZK16",O_RDONLY);
+	if(fd_HZK16<0){
+		printf("can`t open HZK_16 \n");
+		return -1;
+	}
+
+	if(fstat(fd_HZK16,&hzk_stat)){
+		printf("can`t get hzk stat \n");
+		return -1;
+	}
+
+	hzkmem=(unsigned char *)mmap(NULL,hzk_stat.st_size,PROT_READ,MAP_SHARED,fd_HZK16,0);
+	if(hzkmem==(unsigned char * )-1){
+		printf("can`t mmap for hzk16_memfdf\n");
+		return -1;
+	}
+
+	/* 对映射的内存进行操作 */
+	memset(fbmem,0x00,screen_size); //black: 黑色
+
+	lcd_put_ascii( );
+
+
+	close(fd_HZK16);
+	close(fd_fb);
+	return 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

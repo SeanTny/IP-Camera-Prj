@@ -1,0 +1,2 @@
+/work/nfs_root/fs_mini_mdev_new/test/jz2440Driver/globalfifo.ko
+/work/nfs_root/fs_mini_mdev_new/test/jz2440Driver/globalfifo.o

@@ -1,0 +1,43 @@
+/*
+ * globalmem.c
+ *
+ *  Created on: 2017Äê5ÔÂ29ÈÕ
+ *      Author: tusen
+ */
+#include <linux/module.h>
+
+
+
+
+static
+
+
+
+
+
+
+
+
+
+
+static int __init hello_init (void)
+{
+
+	return 0;
+}
+
+
+static int __init hello_exit(void)
+{
+
+	return 0;
+}
+
+
+module_init(hello_init);
+module_exit(hello_exit);
+
+
+
+
+

@@ -1,0 +1,8 @@
+19:45:31 **** Clean-only build of configuration Debug for project 04th.show_file_ok ****
+make test clean 
+arm-linux-gcc -lm -lfreetype -o test_tusen main.o display/disp_manager.o display/fb.o encoding/ascii.o encoding/utf-16be.o encoding/encoding_manager.o encoding/utf-8.o encoding/utf-16le.o draw/draw.o fonts/ascii.o fonts/gbk.o fonts/freetype.o fonts/fonts_manager.o
+rm -f show_file
+rm -f main.o display/disp_manager.o display/fb.o encoding/ascii.o encoding/utf-16be.o encoding/encoding_manager.o encoding/utf-8.o encoding/utf-16le.o draw/draw.o fonts/ascii.o fonts/gbk.o fonts/freetype.o fonts/fonts_manager.o
+
+19:45:34 Build Finished (took 2s.593ms)
+

@@ -1,0 +1,9 @@
+20:54:41 **** Incremental Build of configuration Default for project show_font ****
+make all 
+arm-linux-gcc -c -o  show_font.o  show_font.c
+arm-linux-gcc -c -o  font_data.o  font_data.c
+arm-linux-gcc -o test show_font.o font_data.o	
+rm -rf *.o	
+
+20:54:41 Build Finished (took 137ms)
+

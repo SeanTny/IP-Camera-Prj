@@ -1,0 +1,1 @@
+src/LCD_show_font.o src/LCD_show_font.o: ../src/LCD_show_font.c

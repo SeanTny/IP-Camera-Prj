@@ -1,0 +1,14 @@
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
+LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=linux
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:OOPrgamTest
+eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:OOPrgamTest/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:OOPrgamTest/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:arm-test3/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:arm-test3/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:hello/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:hello/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:prj01hello/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:prj01hello/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
+org.eclipse.launchbar.core.descriptorType.default\:testforlinux/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:testforlinux/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

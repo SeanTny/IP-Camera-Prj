@@ -1,0 +1,10 @@
+16:22:26 **** Incremental Build of configuration Debug for project OOPrgamTest ****
+make all 
+Building target: OOPrgamTest
+Invoking: GCC C Linker
+gcc  -o "OOPrgamTest"  ./src/OOPrgamTest.o   
+Finished building target: OOPrgamTest
+ 
+
+16:22:26 Build Finished (took 71ms)
+

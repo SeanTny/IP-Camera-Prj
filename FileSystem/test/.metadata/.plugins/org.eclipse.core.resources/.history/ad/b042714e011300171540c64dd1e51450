@@ -1,0 +1,4 @@
+
+all
+	gcc -o example1 example1.c  -I /usr/local/include/freetype2      -lfreetype          -lm
+

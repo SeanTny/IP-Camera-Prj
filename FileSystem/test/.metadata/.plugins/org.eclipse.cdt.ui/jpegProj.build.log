@@ -1,0 +1,6 @@
+22:06:29 **** Incremental Build of configuration Debug for project jpegProj ****
+make all 
+arm-linux-gcc -o jpg2rgb  jpg2rgb.c  -ljpeg
+
+22:06:30 Build Finished (took 197ms)
+

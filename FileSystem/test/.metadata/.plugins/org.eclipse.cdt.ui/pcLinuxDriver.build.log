@@ -1,0 +1,10 @@
+01:07:06 **** Incremental Build of configuration Debug for project pcLinuxDriver ****
+make all 
+make -C /lib/modules/4.4.0-66-generic/build M=/work/nfs_root/fs_mini_mdev_new/test/pcLinuxDriver modules
+make[1]: Entering directory `/usr/src/linux-headers-4.4.0-66-generic'
+  Building modules, stage 2.
+  MODPOST 1 modules
+make[1]: Leaving directory `/usr/src/linux-headers-4.4.0-66-generic'
+
+01:07:07 Build Finished (took 844ms)
+

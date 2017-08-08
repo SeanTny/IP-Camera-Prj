@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;digital_file_prj/说明.txt&apos; to &apos;ReadMe.txt&apos;" description="Rename resource &apos;说明.txt&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="说明.txt" name="ReadMe.txt" stamp="1495249741911" updateReferences="true"/>
+</session>

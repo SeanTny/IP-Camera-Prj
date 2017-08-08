@@ -1,0 +1,11 @@
+#all:
+#	gcc -o example1 example1.c  -I /usr/local/include/freetype2      -lfreetype          -lm
+#
+#clean:
+#	rm -rf *.o
+
+all:
+	gcc -o example1 example1.c  -I /usr/local/include/freetype2      -lfreetype          -lm
+	rm -rf *.o	
+clean:
+	rm -rf *.o

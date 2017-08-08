@@ -1,0 +1,1 @@
+cmd_/work/nfs_root/fs_mini_mdev_new/test/jz2440Driver/globalfifo.ko := arm-linux-ld -EL -r  -T /media/tusen/L_Linux/system/linux-3.4.2/scripts/module-common.lds --build-id  -o /work/nfs_root/fs_mini_mdev_new/test/jz2440Driver/globalfifo.ko /work/nfs_root/fs_mini_mdev_new/test/jz2440Driver/globalfifo.o /work/nfs_root/fs_mini_mdev_new/test/jz2440Driver/globalfifo.mod.o

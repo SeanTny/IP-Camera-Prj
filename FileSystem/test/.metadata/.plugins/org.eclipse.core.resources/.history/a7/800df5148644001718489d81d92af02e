@@ -1,0 +1,41 @@
+/*
+ * globalmem.c
+ *
+ *  Created on: 2017年5月29日
+ *      Author: tusen
+ */
+#include <linux/module.h>
+#include <linux/init.h>
+#include <linux/printk.h>
+
+
+static int hello_data __initdata  =1; //只在初始化时候使用，在初始化之后内核释放该空间
+
+
+
+
+
+
+
+static int __init hello_init (void)
+{
+	printk(KERN_INFO);
+
+	return 0;
+}
+
+
+static int __init hello_exit(void)
+{
+
+	return 0;
+}
+
+
+module_init(hello_init);
+module_exit(hello_exit);
+
+
+
+
+
