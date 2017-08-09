@@ -6,33 +6,107 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>564</width>
+    <height>403</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MyWidget</string>
   </property>
-  <widget class="QFontComboBox" name="fontComboBox">
-   <property name="geometry">
-    <rect>
-     <x>9</x>
-     <y>9</y>
-     <width>182</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
-  <widget class="QTextEdit" name="textEdit">
-   <property name="geometry">
-    <rect>
-     <x>9</x>
-     <y>42</y>
-     <width>256</width>
-     <height>192</height>
-    </rect>
-   </property>
-  </widget>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="nLabel">
+       <property name="text">
+        <string>姓名(&amp;N)</string>
+       </property>
+       <property name="buddy">
+        <cstring>nLineEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="nLineEdit"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="sLabel">
+       <property name="text">
+        <string>性别(&amp;S)</string>
+       </property>
+       <property name="buddy">
+        <cstring>sComboBox</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QComboBox" name="sComboBox"/>
+     </item>
+     <item row="2" column="1">
+      <widget class="QSpinBox" name="aSpinBox"/>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="mLabel">
+       <property name="text">
+        <string> 邮箱(&amp;M)</string>
+       </property>
+       <property name="buddy">
+        <cstring>mLineEdit</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="mLineEdit"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="aLabel">
+       <property name="text">
+        <string>年龄(&amp;A)</string>
+       </property>
+       <property name="buddy">
+        <cstring>aSpinBox</cstring>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>57</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QFontComboBox" name="fontComboBox"/>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButton">
+       <property name="text">
+        <string>PushButton</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="textEdit"/>
+   </item>
+  </layout>
+  <zorder>fontComboBox</zorder>
+  <zorder>textEdit</zorder>
+  <zorder>pushButton</zorder>
+  <zorder>formLayoutWidget</zorder>
+  <zorder>verticalSpacer</zorder>
+  <zorder>aLabel</zorder>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
  <resources/>
