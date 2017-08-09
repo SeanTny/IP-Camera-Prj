@@ -1,6 +1,0 @@
-09:28:25 **** Incremental Build of configuration Default for project 03.freetype ****
-make all 
-make: *** 没有规则可以创建目标“all”。 停止。
-
-09:28:25 Build Finished (took 100ms)
-

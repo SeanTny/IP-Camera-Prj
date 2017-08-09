@@ -1,2 +1,0 @@
-/work/nfs_root/fs_mini_mdev_new/test/jz2440Driver/i2c/4th_device_driver_test/at24cxx_drv.ko
-/work/nfs_root/fs_mini_mdev_new/test/jz2440Driver/i2c/4th_device_driver_test/at24cxx_drv.o

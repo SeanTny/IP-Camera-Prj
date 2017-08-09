@@ -1,12 +1,14 @@
+# 这是一个脚本文件，用/bin/sh解析
 #!/bin/sh
-ifconfig eth0 192.168.0.17
-
-#挂载文件系统
+# 挂载文件系统
 mount -a
+# 使用内存文件系统
 mkdir /dev/pts
 mount -t devpts devpts /dev/pts
 echo /sbin/mdev > /proc/sys/kernel/hotplug
 mdev -s
-
-
+# 设置IP
+#/sbin/ifconfig eth0 192.168.1.17	#nfs不需要
+# 挂载 /etc/fstab 中的文件系统
+mount -a
 exec /etc/rc.local
