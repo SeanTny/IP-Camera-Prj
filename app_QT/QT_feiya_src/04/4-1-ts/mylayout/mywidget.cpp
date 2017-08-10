@@ -29,11 +29,29 @@ MyWidget::MyWidget(QWidget *parent) :
 //    setLayout(layout);
 
 
-
+        ui->textEdit->hide();
 
 }
 
 MyWidget::~MyWidget()
 {
     delete ui;
+}
+
+void MyWidget::on_pushButton_toggled(bool checked)
+{
+    //操作文本框
+    ui->textEdit->setVisible(checked);
+
+
+    //操作按键
+    if(checked)
+    {
+        ui->pushButton->setText("隐藏可扩展窗口");
+    }
+    else
+    {
+        ui->pushButton->setText("显示可扩展窗口");
+    }
+
 }

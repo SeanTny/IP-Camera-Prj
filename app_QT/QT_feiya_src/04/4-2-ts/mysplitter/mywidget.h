@@ -15,9 +15,6 @@ public:
     explicit MyWidget(QWidget *parent = 0);
     ~MyWidget();
 
-private slots:
-    void on_pushButton_toggled(bool checked);
-
 private:
     Ui::MyWidget *ui;
 };
