@@ -16,7 +16,7 @@ int main(int argc, char *argv[])
     item.setSize(QSizeF(500, 300));
     QMediaPlayer player;
     player.setVideoOutput(&item);
-    player.setMedia(QUrl::fromLocalFile("../myvideoitem/video.wmv"));
+    player.setMedia(QUrl::fromLocalFile("../../video.wmv"));
     player.play();
     view.show();
 
