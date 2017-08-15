@@ -8,6 +8,6 @@
 //#define DBG_PRINTF(...)  
 #define DBG_PRINTF printf
 
-#define FB_DEVICE_NAME "/dev/fb0"
+#define FB_DEVICE_NAME  "/dev/fb0"
 
 #endif /* _CONFIG_H */

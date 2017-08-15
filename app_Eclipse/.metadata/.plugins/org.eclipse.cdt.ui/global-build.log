@@ -14,3 +14,99 @@ Finished building target: helloworld
 make clean 
 rm -rf  ./src/helloworld.o  ./src/helloworld.d  helloworld
  
+16:39:47 **** Build of configuration Debug for project helloworld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: Cross GCC Compiler
+arm-linux-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: helloworld
+Invoking: Cross GCC Linker
+arm-linux-gcc  -o "helloworld"  ./src/helloworld.o   
+Finished building target: helloworld
+ 
+16:39:54 **** Build of configuration Debug for project video2lcd-ts ****
+make all 
+make -C ./ -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[1]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts'
+make -C convert -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[2]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/convert'
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.convert_manager.o.d -c -o convert_manager.o convert_manager.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.yuv2rgb.o.d -c -o yuv2rgb.o yuv2rgb.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.color.o.d -c -o color.o color.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.mjpeg2rgb.o.d -c -o mjpeg2rgb.o mjpeg2rgb.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.jdatasrc-tj.o.d -c -o jdatasrc-tj.o jdatasrc-tj.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.rgb2rgb.o.d -c -o rgb2rgb.o rgb2rgb.c
+arm-linux-ld -r -o built-in.o convert_manager.o yuv2rgb.o color.o mjpeg2rgb.o jdatasrc-tj.o rgb2rgb.o
+make[2]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/convert'
+make -C display -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[2]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/display'
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.disp_manager.o.d -c -o disp_manager.o disp_manager.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.fb.o.d -c -o fb.o fb.c
+arm-linux-ld -r -o built-in.o disp_manager.o fb.o
+make[2]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/display'
+make -C render -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[2]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/render'
+make -C operation -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[3]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/render/operation'
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.zoom.o.d -c -o zoom.o zoom.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.merge.o.d -c -o merge.o merge.c
+arm-linux-ld -r -o built-in.o zoom.o merge.o
+make[3]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/render/operation'
+arm-linux-ld -r -o built-in.o operation/built-in.o
+make[2]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/render'
+make -C video -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[2]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/video'
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.video_manager.o.d -c -o video_manager.o video_manager.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.v4l2.o.d -c -o v4l2.o v4l2.c
+arm-linux-ld -r -o built-in.o video_manager.o v4l2.o
+make[2]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/video'
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.main.o.d -c -o main.o main.c
+arm-linux-ld -r -o built-in.o main.o convert/built-in.o display/built-in.o render/built-in.o video/built-in.o
+make[1]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts'
+arm-linux-gcc -lm -ljpeg -o video2lcd built-in.o
+17:18:06 **** Incremental Build of configuration Debug for project video2lcd-ts ****
+make all 
+make -C ./ -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[1]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts'
+make -C convert -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[2]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/convert'
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.convert_manager.o.d -c -o convert_manager.o convert_manager.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.yuv2rgb.o.d -c -o yuv2rgb.o yuv2rgb.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.color.o.d -c -o color.o color.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.mjpeg2rgb.o.d -c -o mjpeg2rgb.o mjpeg2rgb.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.jdatasrc-tj.o.d -c -o jdatasrc-tj.o jdatasrc-tj.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.rgb2rgb.o.d -c -o rgb2rgb.o rgb2rgb.c
+arm-linux-ld -r -o built-in.o convert_manager.o yuv2rgb.o color.o mjpeg2rgb.o jdatasrc-tj.o rgb2rgb.o
+make[2]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/convert'
+make -C display -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[2]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/display'
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.disp_manager.o.d -c -o disp_manager.o disp_manager.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.fb.o.d -c -o fb.o fb.c
+arm-linux-ld -r -o built-in.o disp_manager.o fb.o
+make[2]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/display'
+make -C render -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[2]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/render'
+make -C operation -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[3]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/render/operation'
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.zoom.o.d -c -o zoom.o zoom.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.merge.o.d -c -o merge.o merge.c
+arm-linux-ld -r -o built-in.o zoom.o merge.o
+make[3]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/render/operation'
+arm-linux-ld -r -o built-in.o operation/built-in.o
+make[2]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/render'
+make -C video -f /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/Makefile.build
+make[2]: Entering directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/video'
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.video_manager.o.d -c -o video_manager.o video_manager.c
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.v4l2.o.d -c -o v4l2.o v4l2.c
+arm-linux-ld -r -o built-in.o video_manager.o v4l2.o
+make[2]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/video'
+arm-linux-gcc -Wall -Werror -O2 -g -I /work/IP-Camera-Prj/app_Eclipse/video2lcd-ts/include -Wp,-MD,.main.o.d -c -o main.o main.c
+arm-linux-ld -r -o built-in.o main.o convert/built-in.o display/built-in.o render/built-in.o video/built-in.o
+make[1]: Leaving directory `/work/IP-Camera-Prj/app_Eclipse/video2lcd-ts'
+arm-linux-gcc -lm -ljpeg -o video2lcd built-in.o
+17:27:09 **** Clean-only build of configuration Debug for project video2lcd-ts ****
+make clean 
+rm -f ./built-in.o ./display/built-in.o ./display/disp_manager.o ./display/fb.o ./main.o ./render/built-in.o ./render/operation/built-in.o ./render/operation/zoom.o ./render/operation/merge.o ./video/built-in.o ./video/v4l2.o ./video/video_manager.o ./convert/built-in.o ./convert/convert_manager.o ./convert/rgb2rgb.o ./convert/color.o ./convert/yuv2rgb.o ./convert/jdatasrc-tj.o ./convert/mjpeg2rgb.o
+rm -f video2lcd

@@ -1,7 +1,15 @@
-17:11:47 **** Clean-only build of configuration Debug for project helloworld ****
-make clean 
-rm -rf  ./src/helloworld.o  ./src/helloworld.d  helloworld
+16:39:47 **** Build of configuration Debug for project helloworld ****
+make all 
+Building file: ../src/helloworld.c
+Invoking: Cross GCC Compiler
+arm-linux-gcc -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building target: helloworld
+Invoking: Cross GCC Linker
+arm-linux-gcc  -o "helloworld"  ./src/helloworld.o   
+Finished building target: helloworld
  
 
-17:11:48 Build Finished (took 733ms)
+16:39:53 Build Finished (took 6s.796ms)
 
