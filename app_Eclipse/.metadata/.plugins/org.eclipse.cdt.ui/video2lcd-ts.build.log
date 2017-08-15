@@ -1,7 +1,7 @@
-17:27:09 **** Clean-only build of configuration Debug for project video2lcd-ts ****
+22:12:13 **** Clean-only build of configuration Debug for project video2lcd-ts ****
 make clean 
 rm -f ./built-in.o ./display/built-in.o ./display/disp_manager.o ./display/fb.o ./main.o ./render/built-in.o ./render/operation/built-in.o ./render/operation/zoom.o ./render/operation/merge.o ./video/built-in.o ./video/v4l2.o ./video/video_manager.o ./convert/built-in.o ./convert/convert_manager.o ./convert/rgb2rgb.o ./convert/color.o ./convert/yuv2rgb.o ./convert/jdatasrc-tj.o ./convert/mjpeg2rgb.o
 rm -f video2lcd
 
-17:27:12 Build Finished (took 2s.710ms)
+22:12:14 Build Finished (took 568ms)
 
