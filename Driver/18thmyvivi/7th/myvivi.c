@@ -325,14 +325,14 @@ static const struct v4l2_ioctl_ops myvivi_ioctl_ops = {
         .vidioc_s_fmt_vid_cap     = myvivi_vidioc_s_fmt_vid_cap,
         
         /* 缓冲区操作: 申请/查询/放入队列/取出队列 */
-        .vidioc_reqbufs       = myvivi_vidioc_reqbufs,
-        .vidioc_querybuf      = myvivi_vidioc_querybuf,
-        .vidioc_qbuf          = myvivi_vidioc_qbuf,
-        .vidioc_dqbuf         = myvivi_vidioc_dqbuf,
+        .vidioc_reqbufs           = myvivi_vidioc_reqbufs,
+        .vidioc_querybuf          = myvivi_vidioc_querybuf,
+        .vidioc_qbuf              = myvivi_vidioc_qbuf,
+        .vidioc_dqbuf             = myvivi_vidioc_dqbuf,
         
         // 启动/停止
-        .vidioc_streamon      = myvivi_vidioc_streamon,
-        .vidioc_streamoff     = myvivi_vidioc_streamoff,   
+        .vidioc_streamon          = myvivi_vidioc_streamon,
+        .vidioc_streamoff         = myvivi_vidioc_streamoff,   
 };
 
 
@@ -352,6 +352,7 @@ static const struct v4l2_file_operations myvivi_fops = {
 
 
 static struct video_device *myvivi_device;
+
 
 
 
