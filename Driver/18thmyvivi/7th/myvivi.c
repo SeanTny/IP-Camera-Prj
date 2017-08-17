@@ -83,7 +83,7 @@ static int myvivi_buffer_prepare(struct videobuf_queue *vq,struct videobuf_buffe
 {
   /* 0. 设置videobuf */
 	vb->size = myvivi_format.fmt.pix.sizeimage;
-  vb->bytesperline = myvivi_format.fmt.pix.bytesperline;
+    vb->bytesperline = myvivi_format.fmt.pix.bytesperline;
 	vb->width  = myvivi_format.fmt.pix.width;
 	vb->height = myvivi_format.fmt.pix.height;
 	vb->field  = field;
@@ -91,14 +91,7 @@ static int myvivi_buffer_prepare(struct videobuf_queue *vq,struct videobuf_buffe
   /* 1. 做些准备工作 */
   myvivi_precalculate_bars(0);
 
-#if 0
-    /* 2. 调用videobuf_iolock为类型为V4L2_MEMORY_USERPTR的videobuf分配内存 */
-	if (VIDEOBUF_NEEDS_INIT == buf->vb.state) {
-		rc = videobuf_iolock(vq, &buf->vb, NULL);
-		if (rc < 0)
-			goto fail;
-	}
-#endif
+
   /* 3. 设置状态 */
 	vb->state = VIDEOBUF_PREPARED;
 
@@ -113,7 +106,7 @@ static int myvivi_buffer_prepare(struct videobuf_queue *vq,struct videobuf_buffe
  */
 static void myvivi_buffer_queue(struct videobuf_queue *vq, struct videobuf_buffer *vb)
 {
-	  vb->state = VIDEOBUF_QUEUED;
+	vb->state = VIDEOBUF_QUEUED;
 
     /* 把videobuf放入本地一个队列尾部
      * 定时器处理函数就可以从本地队列取出videobuf
@@ -150,12 +143,12 @@ static int myvivi_open(struct file *file)
     /* 队列操作2: 初始化 */
 	videobuf_queue_vmalloc_init(&myvivi_vb_vidqueue,
 	                            &myvivi_video_qops,
-			                        NULL,
-			                        &myvivi_queue_slock,
-			                        V4L2_BUF_TYPE_VIDEO_CAPTURE,
-			                        V4L2_FIELD_INTERLACED,
-			                        sizeof(struct videobuf_buffer),
-			                        NULL); /* 倒数第2个参数是buffer的头部大小 */
+			                    NULL,
+			                    &myvivi_queue_slock,
+			                    V4L2_BUF_TYPE_VIDEO_CAPTURE,
+			                    V4L2_FIELD_INTERLACED,
+			                    sizeof(struct videobuf_buffer),
+			                    NULL); /* 倒数第2个参数是buffer的头部大小 */
 
     myvivi_timer.expires = jiffies + 1;
     add_timer(&myvivi_timer);
@@ -166,7 +159,7 @@ static int myvivi_open(struct file *file)
 
 static int myvivi_close(struct file *file)
 {
-  del_timer(&myvivi_timer);
+    del_timer(&myvivi_timer);
 	videobuf_stop(&myvivi_vb_vidqueue);
 	videobuf_mmap_free(&myvivi_vb_vidqueue);
     
@@ -223,7 +216,7 @@ static int myvivi_vidioc_g_fmt_vid_cap(struct file *file, void *priv,struct v4l2
 /* 测试驱动程序是否支持某种格式 */
 static int myvivi_vidioc_try_fmt_vid_cap(struct file *file, void *priv,struct v4l2_format *f)
 {
-	unsigned    int          maxw, maxh;
+  unsigned    int          maxw, maxh;
   enum v4l2_field          field;
 
   if (f->fmt.pix.pixelformat != V4L2_PIX_FMT_YUYV)
@@ -234,7 +227,7 @@ static int myvivi_vidioc_try_fmt_vid_cap(struct file *file, void *priv,struct v4
 	if (field == V4L2_FIELD_ANY) 
     {
 		  field = V4L2_FIELD_INTERLACED;
-	  } 
+	} 
   else if (V4L2_FIELD_INTERLACED != field) 
 	  {
 		  return -EINVAL;
@@ -249,7 +242,8 @@ static int myvivi_vidioc_try_fmt_vid_cap(struct file *file, void *priv,struct v4
    * 计算bytesperline, sizeimage
    */
 	v4l_bound_align_image(&f->fmt.pix.width,  48, maxw, 2,
-			                  &f->fmt.pix.height, 32, maxh, 0, 0);
+	                      &f->fmt.pix.height, 32, maxh, 0, 0);
+  
 	f->fmt.pix.bytesperline =(f->fmt.pix.width * 16) >> 3;
 	f->fmt.pix.sizeimage =f->fmt.pix.height * f->fmt.pix.bytesperline;
 
@@ -316,7 +310,7 @@ static int myvivi_vidioc_streamoff(struct file *file, void *priv, enum v4l2_buf_
 
 static const struct v4l2_ioctl_ops myvivi_ioctl_ops = {
         // 表示它是一个摄像头设备
-        .vidioc_querycap      = myvivi_vidioc_querycap,
+        .vidioc_querycap          = myvivi_vidioc_querycap,
 
         /* 用于列举、获得、测试、设置摄像头的数据的格式 */
         .vidioc_enum_fmt_vid_cap  = myvivi_vidioc_enum_fmt_vid_cap,
@@ -340,7 +334,7 @@ static const struct v4l2_ioctl_ops myvivi_ioctl_ops = {
 
 
 static const struct v4l2_file_operations myvivi_fops = {
-	  .owner		  = THIS_MODULE,
+	.owner		= THIS_MODULE,
     .open       = myvivi_open,
     .release    = myvivi_close,
     .mmap       = myvivi_mmap,
@@ -359,13 +353,14 @@ static struct video_device *myvivi_device;
 //内核要判断，没法办法，写一个空的函数体在这里冒充
 static void myvivi_release(struct video_device *vdev)
 {
+
 }
 
 
 
 static void myvivi_timer_function(unsigned long data)
 {
-  struct videobuf_buffer *vb;
+    struct videobuf_buffer *vb;
 	void   *vbuf;
 	struct timeval ts;
     
@@ -421,7 +416,6 @@ static int myvivi_init(void)
     myvivi_device = video_device_alloc();
 
     /* 2. 设置 */
-
     /* 2.1 */
     myvivi_device->release = myvivi_release;
 
@@ -440,7 +434,7 @@ static int myvivi_init(void)
     error = video_register_device(myvivi_device, VFL_TYPE_GRABBER, -1);
 
     /* 用定时器产生数据并唤醒进程 */
-	  init_timer(&myvivi_timer);
+	init_timer(&myvivi_timer);
     myvivi_timer.function  = myvivi_timer_function;
 
     INIT_LIST_HEAD(&myvivi_vb_local_queue);
