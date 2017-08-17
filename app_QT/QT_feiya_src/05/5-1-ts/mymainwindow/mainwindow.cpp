@@ -1,6 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "QMenu"
+#include "QToolButton"
+#include "QSpinBox"
+#include "QTextEdit"
+#include "QMdiSubWindow"
+
+
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -37,6 +43,19 @@ MainWindow::MainWindow(QWidget *parent) :
 
 
 
+   QToolButton *toolBtn=new QToolButton(this);
+   toolBtn->setText("颜色");
+
+   QMenu *colorMenu=new QMenu(this);  //创建一个菜单
+   colorMenu->addAction("红色");
+   colorMenu->addAction("绿色");
+
+   toolBtn->setMenu(colorMenu);       //添加菜单
+   toolBtn->setPopupMode(QToolButton::MenuButtonPopup);
+
+    ui->mainToolBar->addWidget(toolBtn);
+    QSpinBox *spinBox=new QSpinBox(this);
+    ui->mainToolBar->addWidget(spinBox);
 
 
 
@@ -47,3 +66,18 @@ MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+void MainWindow::on_action_New_triggered()
+{
+    //新建文本编辑器部件
+    QTextEdit *edit=new QTextEdit(this);
+
+    QMdiSubWindow *child =ui->mdiArea->addSubWindow(edit);
+    child->setWindowTitle("多文当编辑器子窗口");
+    child->show();
+
+}
+
+
+
+
