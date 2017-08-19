@@ -16,7 +16,7 @@ Widget::Widget(QWidget *parent) :
 Widget::~Widget()
 {
     delete ui;
-}
+}my
 
 void Widget::keyPressEvent(QKeyEvent *event)
 {
